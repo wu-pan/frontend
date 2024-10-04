@@ -1,4 +1,5 @@
-import "@/app/globals.css";
+import "@/app/[locale]/globals.css";
+import Providers from "@/providers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
@@ -21,15 +22,19 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: ReactNode;
+  params: { locale: string };
 }
 
-const RootLayout = ({ children }: Readonly<RootLayoutProps>) => {
+const RootLayout = ({
+  children,
+  params: { locale },
+}: Readonly<RootLayoutProps>) => {
   return (
-    <html lang="zh">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
