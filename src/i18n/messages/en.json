@@ -1,1 +1,10 @@
-{}
+{
+  "albums": {
+    "album": "Album",
+    "title": "Title",
+    "actions": "actions"
+  },
+  "songs": {
+    "title": "Title"
+  }
+}

@@ -3,6 +3,7 @@ import Providers from "@/providers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
+import { Toaster } from "sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ const RootLayout = ({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>{children}</Providers>
+        <Toaster />
       </body>
     </html>
   );

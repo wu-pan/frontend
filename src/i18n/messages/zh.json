@@ -1,1 +1,10 @@
-{}
+{
+  "albums": {
+    "album": "专辑",
+    "title": "标题",
+    "actions": "操作"
+  },
+  "songs": {
+    "title": "标题"
+  }
+}
